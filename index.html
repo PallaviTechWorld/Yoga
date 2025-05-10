@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga With Pallavi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-semibold text-teal-500">Yoga With Pallavi</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#home" class="hover:text-teal-300 transition duration-300">Home</a></li>
+                    <li><a href="#styles" class="hover:text-teal-300 transition duration-300">Yoga Styles</a></li>
+                    <li><a href="#benefits" class="hover:text-teal-300 transition duration-300">Benefits</a></li>
+                    <li><a href="#contact" class="hover:text-teal-300 transition duration-300">Contact</a></li>
+                    <li><a href="#join" class="text-white bg-teal-500 hover:bg-teal-600 rounded-md px-5 py-3 transition duration-300">Join Us</a></li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-gray-500 focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 right-0 h-full w-80 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out">
+        <div class="flex flex-col h-full">
+            <div class="px-4 py-6">
+                <div class="flex justify-end">
+                    <button id="close-menu-btn" class="text-gray-700 focus:outline-none" aria-label="Close Menu">
+                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <nav class="mt-8">
+                    <ul class="flex flex-col space-y-4">
+                        <li><a href="#home" class="block text-lg text-gray-700 hover:text-teal-500 transition duration-300 py-2">Home</a></li>
+                        <li><a href="#styles" class="block text-lg text-gray-700 hover:text-teal-500 transition duration-300 py-2">Yoga Styles</a></li>
+                        <li><a href="#benefits" class="block text-lg text-gray-700 hover:text-teal-500 transition duration-300 py-2">Benefits</a></li>
+                        <li><a href="#contact" class="block text-lg text-gray-700 hover:text-teal-500 transition duration-300 py-2">Contact</a></li>
+                        <li><a href="#join" class="block text-lg text-white bg-teal-500 hover:bg-teal-600 rounded-md px-5 py-3 transition duration-300 text-center">Join Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <section id="home" class="bg-teal-100 py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-semibold text-teal-700 mb-4">Find Your Inner Balance</h2>
+                <p class="text-lg text-gray-600 mb-8">Explore the transformative power of yoga and embark on a journey of self-discovery.</p>
+                <a href="#join" class="text-white bg-teal-500 hover:bg-teal-600 rounded-md px-8 py-3 text-xl transition duration-300">Start Your Journey</a>
+            </div>
+        </section>
+
+        <section id="styles" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-gray-800 text-center mb-12">Explore Different Yoga Styles</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1544275128-5e28c7492a94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Hatha Yoga" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Hatha Yoga</h3>
+                        <p class="text-gray-700 mb-4">A gentle and foundational practice focusing on basic postures and breath control.</p>
+                        <a href="#" class="text-teal-400 hover:text-teal-500 transition duration-300 font-medium">Learn More</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1589984322982-1054c4034110?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8eW9nYXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Vinyasa Yoga" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Vinyasa Yoga</h3>
+                        <p class="text-gray-700 mb-4">A dynamic and flowing style that links movement with breath.</p>
+                        <a href="#" class="text-teal-400 hover:text-teal-500 transition duration-300 font-medium">Learn More</a>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1552619112-8573b205ca24?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHlvZ2F8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Yin Yoga" class="rounded-md mb-4 w-full h-48 object-cover">
+                        <h3 class="text-xl font-semibold text-teal-600 mb-2">Yin Yoga</h3>
+                        <p class="text-gray-700 mb-4">A slow-paced practice with long-held passive postures targeting connective tissues.</p>
+                        <a href="#" class="text-teal-400 hover:text-teal-500 transition duration-300 font-medium">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="bg-teal-100 py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-teal-700 text-center mb-12">Experience the Benefits of Yoga</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-teal-500 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5.5m-3-4.5l2-5.5m0 0V6.75a.75.75 0 011.5 0V15m0 0l2-5.5M7.875 20.25h8.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H7.875c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Increased Flexibility</h3>
+                        <p class="text-gray-600">Improve your range of motion and physical elasticity.</p>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-teal-500 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6-2v4m6-4h6m-6 0H6m12-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Reduced Stress</h3>
+                        <p class="text-gray-600">Promote relaxation and mental clarity.</p>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 mx-auto text-teal-500 mb-4">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.563 3.062a.75.75 0 01.94-.319h7.99c.453 0 .833.307.94.74l1.337 7.99a.75.75 0 01-.319.94l-7.99 1.337a.75.75 0 01-.74 0l-7.99-1.337a.75.75 0 01-.319-.94L3.062 10.563a.75.75 0 010-.94l1.337-7.99a.75.75 0 01.74-.319z" />
+                        </svg>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Improved Breathing</h3>
+                        <p class="text-gray-600">Enhance lung capacity and respiratory function.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">Contact Us</h2>
+                <p class="text-lg text-gray-600 text-center mb-8">Have questions? Reach out to us!</p>
+                <form class="max-w-md mx-auto space-y-6">
+                    <input type="text" placeholder="Your Name" class="w-full rounded-md py-3 px-4 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <input type="email" placeholder="Your Email" class="w-full rounded-md py-3 px-4 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                    <textarea placeholder="Your Message" class="w-full rounded-md py-3 px-4 border border-gray-200 focus:outline-none focus:ring-2 focus:ring-teal-500 h-32"></textarea>
+                    <button type="submit" class="w-full text-white bg-teal-500 hover:bg-teal-600 rounded-md py-3 px-6 text-xl transition duration-300">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="join" class="bg-teal-100 py-20">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-semibold text-teal-700 mb-4">Join Our Community</h2>
+                <p class="text-lg text-gray-600 mb-8">Embark on a transformative journey with our experienced instructors and supportive community.</p>
+                <a href="#" class="text-white bg-teal-500 hover:bg-teal-600 rounded-md px-8 py-3 text-xl transition duration-300">Become a Member</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2025 YogaWith Pallavi. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('header nav ul li a');
+        const sections = document.querySelectorAll('section');
+
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+        function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
