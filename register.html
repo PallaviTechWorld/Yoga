@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- Your Navigation here (if you want to keep it consistent with the main page) -->
+
+    <section class="register">
+        <div class="register-container">
+            <h2>Register</h2>
+            <form action="/submit-form" method="POST" id="registerForm">
+                <!-- Name field -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required 
+                    pattern="^[A-Za-z\s]+$" 
+                    title="Name should only contain letters and spaces">
+                <small class="error-message" id="name-error"></small>
+
+                <!-- Email field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required 
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" 
+                    title="Please enter a valid email address">
+                <small class="error-message" id="email-error"></small>
+
+                <!-- Password field -->
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required
+                    minlength="6"
+                    title="Password must be at least 6 characters long">
+                <small class="error-message" id="password-error"></small>
+
+                <!-- Confirm Password field -->
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required
+                    minlength="6" 
+                    title="Password must be at least 6 characters long">
+                <small class="error-message" id="confirm-password-error"></small>
+
+                <!-- Submit button -->
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </section>
+
+   <script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Stop form from submitting to server
+
+        let valid = true;
+
+        const name = document.getElementById("name").value.trim();
+        const nameError = document.getElementById("name-error");
+        if (!/^[A-Za-z\s]+$/.test(name)) {
+            nameError.textContent = "Name should only contain letters and spaces";
+            valid = false;
+        } else {
+            nameError.textContent = "";
+        }
+
+        const email = document.getElementById("email").value.trim();
+        const emailError = document.getElementById("email-error");
+        if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/.test(email)) {
+            emailError.textContent = "Please enter a valid email address";
+            valid = false;
+        } else {
+            emailError.textContent = "";
+        }
+
+        const password = document.getElementById("password").value;
+        const passwordError = document.getElementById("password-error");
+        if (password.length < 6) {
+            passwordError.textContent = "Password must be at least 6 characters long";
+            valid = false;
+        } else {
+            passwordError.textContent = "";
+        }
+
+        const confirmPassword = document.getElementById("confirm-password").value;
+        const confirmPasswordError = document.getElementById("confirm-password-error");
+        if (confirmPassword !== password) {
+            confirmPasswordError.textContent = "Passwords do not match";
+            valid = false;
+        } else {
+            confirmPasswordError.textContent = "";
+        }
+
+        if (valid) {
+            alert("Registration successful!");
+            window.location.href = "login.html"; // Redirect to login page
+        }
+    });
+</script>
+</body>
+</html>
